@@ -171,12 +171,8 @@ validate:
         if filename[0].isalnum() == False:
             filename = filename[1::]
         test_api = os.path.join(feature_path,"{}.yml".format(filename))
-        # utils.create_file(test_api,case)
-        if not os.path.exists(test_api):
-            with open(test_api, "w", encoding="utf-8") as f:
-                f.write(case)
-        else:
-            logging.info("{} is exists!".format(file_path))
+        utils.create_file(test_api,case)
+
 
 
 if __name__ == '__main__':
